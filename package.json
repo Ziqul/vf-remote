@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "",
-    "build": "rollup src/main.js --file build/bundle.js --format umd --name vfRemote"
+    "build": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote"
   },
   "repository": {
     "type": "git",
