@@ -5,7 +5,8 @@
   "main": "",
   "scripts": {
     "test": "",
-    "build": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote"
+    "build": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote",
+    "publish": "npm version patch && git push —-tags origin master && npm publish"
   },
   "repository": {
     "type": "git",
