@@ -4,12 +4,6 @@
     (global.vfRemote = factory());
 }(this, (function () { 'use strict';
 
-    var classHandler = {
-        get: function(obj, prop) {
-            return new Proxy({prop: prop}, methodHandler);
-        }
-    };
-
     var methodHandler = {
         get: function(obj, prop) {
             return function() {
@@ -36,12 +30,18 @@
                     actionArgs = actionArgs.concat(
                         [{ buffer: true, escape: false, timeout: 30000 }]);
 
-                    console.log(actionArgs);
-
-                    Visualforce.remoting.Manager.invokeAction.apply(
-                        Visualforce.remoting.Manager, actionArgs);
+                    Visualforce
+                        .remoting.Manager
+                        .invokeAction.apply(
+                            Visualforce.remoting.Manager, actionArgs);
                 });
             };
+        }
+    };
+
+    var classHandler = {
+        get: function(obj, prop) {
+            return new Proxy({prop: prop}, methodHandler);
         }
     };
 
