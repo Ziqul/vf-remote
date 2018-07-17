@@ -1,0 +1,20 @@
+{
+  "name": "vf-remote",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "",
+    "build": "rollup src/main.js --file build/bundle.js --format umd --name vfRemote"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Maxim Sorokin (m.s.v.00a@gmail.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "rollup": "^0.62.0"
+  }
+}
