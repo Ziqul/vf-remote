@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "test": "",
-    "build": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote",
-    "build-prod": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote && uglifyjs --compress --mangle --output dist/vf-remote.js -- dist/vf-remote.js"
+    "build": "rollup src/main.js --file build/vf-remote.js --format umd --name vfRemote",
+    "build-prod": "rollup src/main.js --file build/vf-remote.js --format umd --name vfRemote && uglifyjs --compress --mangle --output dist/vf-remote.js -- build/vf-remote.js"
   },
   "repository": {
     "type": "git",
