@@ -6,6 +6,7 @@
   "scripts": {
     "test": "",
     "build": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote",
+    "build-prod": "rollup src/main.js --file dist/vf-remote.js --format umd --name vfRemote && uglifyjs --compress --mangle --output dist/vf-remote.js -- dist/vf-remote.js",
     "publish": "npm version patch && git push —-tags origin master && npm publish"
   },
   "repository": {
@@ -16,6 +17,7 @@
   "author": "Maxim Sorokin (m.s.v.00a@gmail.com)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "rollup": "^0.62.0"
+    "rollup": "^0.62.0",
+    "uglify-js": "^3.4.5"
   }
 }
